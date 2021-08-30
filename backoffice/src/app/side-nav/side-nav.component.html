@@ -1,6 +1,6 @@
 <nav [ngClass]="{ minimized: minimize }">
   <div class="head" (click)="toggleMinimize()">
-    <img src="https://angular.io/assets/images/logos/angular/angular.svg" />
+    <img src="assets/images/axerve-logo.png" />
     <div class="title">AE Payment Facilitator</div>
   </div>
 
@@ -13,25 +13,37 @@
   </div>
 
   <div class="menu">
+    <div class="menu-item language">
+      <span [ngClass]="{ active: !app.isItalian }">English</span>
+      <p-inputSwitch
+        [(ngModel)]="app.isItalian"
+        (onChange)="app.changeLanguage($event)"
+      ></p-inputSwitch>
+      <span [ngClass]="{ active: app.isItalian }">Italian</span>
+    </div>
+
     <ng-container *ngFor="let menuItem of menu">
       <a
         class="menu-item"
         [routerLink]="[menuItem.path]"
         routerLinkActive="active"
-        *ngIf="
-          !menuItem.subMenu &&
-          (!menuItem.isVisible || (menuItem.isVisible && menuItem.isVisible()))
-        "
+        *ngIf="menuItem.path && menuItem.isVisible()"
         (click)="clearAndAdd(menuItem.label, menuItem.path)"
       >
         <i [ngClass]="menuItem.icon"></i>
         <span>{{ menuItem.label }}</span>
+        <div class="notify-badge" *ngIf="menuItem.notificationCount > 0">
+          {{ menuItem.notificationCount }}
+        </div>
       </a>
-      <expand-collapse *ngIf="menuItem.subMenu">
+      <expand-collapse *ngIf="menuItem.subMenu && menuItem.isVisible()">
         <header>
           <a class="menu-item">
             <i [ngClass]="menuItem.icon"></i>
             <span>{{ menuItem.label }}</span>
+            <div class="notify-badge" *ngIf="menuItem.notificationCount > 0">
+              {{ menuItem.notificationCount }}
+            </div>
           </a>
         </header>
         <content>
@@ -41,14 +53,14 @@
                 class="menu-item"
                 [routerLink]="[subItem.path]"
                 routerLinkActive="active"
-                *ngIf="
-                  !subItem.isVisible ||
-                  (subItem.isVisible && subItem.isVisible())
-                "
+                *ngIf="subItem.isVisible()"
                 (click)="clearAndAdd(subItem.label, subItem.path)"
               >
                 <i [ngClass]="subItem.icon"></i>
                 <span>{{ subItem.label }}</span>
+                <div class="notify-badge" *ngIf="subItem.notificationCount > 0">
+                  {{ subItem.notificationCount }}
+                </div>
               </a>
             </ng-container>
           </div>

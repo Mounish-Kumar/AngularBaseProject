@@ -40,10 +40,8 @@
 
 // CSS Variables
 :root {
-  --nav-width: 100vw;
-
-  @include tablet {
-    --nav-width: 225px;
+  @include mobile-tablet {
+    --nav-width: 200px;
   }
 
   @include desktop {

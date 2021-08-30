@@ -8,11 +8,23 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
+    path: 'sub2',
+    component: DashboardComponent
+  },
+  {
+    path: 'sub3',
+    component: DashboardComponent
+  },
+  {
     path: 'sub4',
     component: DashboardComponent
   },
   {
-    path: 'sub5',
+    path: 'main2',
+    component: DashboardComponent
+  },
+  {
+    path: 'main4',
     component: DashboardComponent
   }
 ]

@@ -83,3 +83,69 @@ nav {
     display: none;
   }
 }
+
+.p-progress-spinner {
+  display: flex !important;
+  height: 99% !important;
+}
+
+.notify-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  margin-left: 0.3rem;
+  color: #fff !important;
+  background-color: #f93154;
+}
+
+.p-card-content {
+  padding: 0 !important;
+}
+
+.card {
+  $padding: 0.3rem;
+
+  .card-heading {
+    font-weight: 800;
+    padding: $padding;
+    color: #33b5e5;
+  }
+
+  .heading {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    padding: $padding;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column;
+    padding-left: 1.5rem;
+
+    li {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: $padding;
+
+      span {
+        padding-right: 2rem;
+      }
+    }
+  }
+}
+
+.language {
+  .p-inputswitch {
+    display: block !important;
+  }
+}

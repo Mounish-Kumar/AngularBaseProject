@@ -7,6 +7,12 @@ export class AppService {
 
   showLoader: boolean = false;
 
+  isItalian: boolean = true;
+
   constructor() {
+  }
+
+  changeLanguage(e: any) {
+    console.log(this.isItalian);
   }
 }
