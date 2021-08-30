@@ -67,7 +67,9 @@ nav {
     }
   }
 
-  .user {
+  .user,
+  .language {
+    padding: 0.5rem 1rem;
     border-bottom: 2px solid rgba(#000, 0.5);
     color: #fff !important;
 
@@ -79,9 +81,6 @@ nav {
   .language {
     display: flex;
     justify-content: space-evenly;
-    padding: 0.6rem 1rem;
-    border-bottom: 2px solid rgba(#000, 0.5);
-    color: #fff !important;
 
     .active {
       font-weight: 800;
