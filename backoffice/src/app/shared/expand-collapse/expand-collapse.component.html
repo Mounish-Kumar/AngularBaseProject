@@ -1,0 +1,14 @@
+<div class="collapsible" (click)="toggle()">
+  <ng-content select="header"></ng-content>
+  <i
+    class="pi collapse-arrow"
+    [ngClass]="collapse ? 'pi-angle-down' : 'pi-angle-up'"
+  ></i>
+</div>
+<div
+  #cc
+  class="collapsible-content"
+  [style.max-height]="this.collapse ? '0px' : this.contentHeight + 'px'"
+>
+  <ng-content select="content"></ng-content>
+</div>

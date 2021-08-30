@@ -1,0 +1,10 @@
+<div class="root">
+  <side-nav></side-nav>
+  <div class="wrapper">
+    <breadcrumb></breadcrumb>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<loader *ngIf="app.showLoader"></loader>

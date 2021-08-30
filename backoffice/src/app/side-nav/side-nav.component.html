@@ -1,0 +1,64 @@
+<nav [ngClass]="{ minimized: minimize }">
+  <div class="head" (click)="toggleMinimize()">
+    <img src="https://angular.io/assets/images/logos/angular/angular.svg" />
+    <div class="title">AE Payment Facilitator</div>
+  </div>
+
+  <div class="menu-item user">
+    <i class="pi pi-user"></i>
+    <span>
+      {{ user.name || user.code }}
+      <div class="user-code" *ngIf="user?.name">{{ user.code }}</div>
+    </span>
+  </div>
+
+  <div class="menu">
+    <ng-container *ngFor="let menuItem of menu">
+      <a
+        class="menu-item"
+        [routerLink]="[menuItem.path]"
+        routerLinkActive="active"
+        *ngIf="
+          !menuItem.subMenu &&
+          (!menuItem.isVisible || (menuItem.isVisible && menuItem.isVisible()))
+        "
+        (click)="clearAndAdd(menuItem.label, menuItem.path)"
+      >
+        <i [ngClass]="menuItem.icon"></i>
+        <span>{{ menuItem.label }}</span>
+      </a>
+      <expand-collapse *ngIf="menuItem.subMenu">
+        <header>
+          <a class="menu-item">
+            <i [ngClass]="menuItem.icon"></i>
+            <span>{{ menuItem.label }}</span>
+          </a>
+        </header>
+        <content>
+          <div class="sub-menu">
+            <ng-container *ngFor="let subItem of menuItem.subMenu">
+              <a
+                class="menu-item"
+                [routerLink]="[subItem.path]"
+                routerLinkActive="active"
+                *ngIf="
+                  !subItem.isVisible ||
+                  (subItem.isVisible && subItem.isVisible())
+                "
+                (click)="clearAndAdd(subItem.label, subItem.path)"
+              >
+                <i [ngClass]="subItem.icon"></i>
+                <span>{{ subItem.label }}</span>
+              </a>
+            </ng-container>
+          </div>
+        </content>
+      </expand-collapse>
+    </ng-container>
+  </div>
+
+  <a class="menu-item logout">
+    <i class="pi pi-sign-out"></i>
+    <span>Logout</span>
+  </a>
+</nav>

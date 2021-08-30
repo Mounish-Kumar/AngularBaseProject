@@ -1,0 +1,8 @@
+<div class="breadcrumb">
+  <a
+    *ngFor="let trail of service.trails; let i = index"
+    (click)="navigateTo(i)"
+  >
+    {{ trail.label }}
+  </a>
+</div>
