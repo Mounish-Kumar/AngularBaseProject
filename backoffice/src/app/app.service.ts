@@ -13,6 +13,5 @@ export class AppService {
   }
 
   changeLanguage(e: any) {
-    console.log(this.isItalian);
   }
 }

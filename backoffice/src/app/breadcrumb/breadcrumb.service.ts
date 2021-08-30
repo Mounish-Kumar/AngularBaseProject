@@ -11,7 +11,6 @@ export class BreadcrumbService {
   constructor() { }
 
   add(label: string, path: string) {
-    console.log(label + " : " + path);
     this.trails.push({ label, path });
   }
 }
