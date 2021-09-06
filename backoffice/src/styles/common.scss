@@ -40,6 +40,8 @@
 
 // CSS Variables
 :root {
+  --breadcrumb-height: 2.6rem;
+
   @include mobile-tablet {
     --nav-width: 200px;
   }

@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoaderComponent } from './loader/loader.component';
+import { AlertMessagesComponent } from './alert-messages/alert-messages.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LoaderComponent } from './loader/loader.component';
     SideNavComponent,
     BreadcrumbComponent,
     DashboardComponent,
-    LoaderComponent
+    LoaderComponent,
+    AlertMessagesComponent,
+    AccessDeniedComponent
   ],
   imports: [
     BrowserModule,

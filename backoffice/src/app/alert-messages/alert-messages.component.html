@@ -1,0 +1,23 @@
+<div class="alert-messages">
+  <div
+    *ngFor="let item of service.messages; let i = index"
+    [ngClass]="{
+      success: item.type == 'SUCCESS',
+      error: item.type == 'ERROR',
+      warning: item.type == 'WARNING',
+      info: item.type == 'INFO'
+    }"
+  >
+    <i
+      [ngClass]="{
+        pi: true,
+        'pi-check-circle': item.type == 'SUCCESS',
+        'pi-times-circle': item.type == 'ERROR',
+        'pi-exclamation-triangle': item.type == 'WARNING',
+        'pi-exclamation-circle': item.type == 'INFO'
+      }"
+    ></i>
+    <span>{{ item.message }}</span>
+    <i class="pi pi-times close-icon" (click)="service.removeMessage(i)"></i>
+  </div>
+</div>

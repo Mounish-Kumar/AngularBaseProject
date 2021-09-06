@@ -1,5 +1,5 @@
 .breadcrumb {
-  $height: 2.6rem;
+  $height: var(--breadcrumb-height);
   $border: 2px;
   $borderneg: -2px;
   $border-color: #fff;
