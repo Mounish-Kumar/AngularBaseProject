@@ -9,6 +9,11 @@
     transform: translateY(-50%);
     font-size: 0.8rem;
     height: 0.8rem;
+
+    &.left {
+      left: 1rem;
+      right: auto;
+    }
   }
 }
 

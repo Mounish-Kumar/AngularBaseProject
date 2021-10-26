@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoaderComponent } from './loader/loader.component';
 import { AlertMessagesComponent } from './alert-messages/alert-messages.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { QuadraturaAcquirerComponent } from './quadratura-acquirer/quadratura-acquirer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AccessDeniedComponent } from './access-denied/access-denied.component';
     DashboardComponent,
     LoaderComponent,
     AlertMessagesComponent,
-    AccessDeniedComponent
+    AccessDeniedComponent,
+    QuadraturaAcquirerComponent
   ],
   imports: [
     BrowserModule,

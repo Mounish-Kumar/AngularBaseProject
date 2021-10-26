@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'expand-collapse',
@@ -12,6 +12,10 @@ export class ExpandCollapseComponent implements OnInit {
   contentHeight: number = 0;
 
   collapse: boolean = true;
+
+  @Input() hideArrow: boolean = false;
+
+  @Input() leftArrow: boolean = false;
 
   constructor() { }
 

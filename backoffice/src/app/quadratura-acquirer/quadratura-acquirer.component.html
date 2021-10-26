@@ -1,0 +1,145 @@
+<expand-collapse [leftArrow]="true">
+    <header>
+        <div class="quadratura bold color">
+            <div class="title">05/07/2021</div>
+            <div class="sub-title">Giorno non quadrato</div>
+        </div>
+    </header>
+    <content>
+        <div class="quadratura bold">
+            <div class="title">Multicurrency S1 Saldo</div>
+            <div class="amount">0,00 EUR</div>
+            <div class="amount">0,00 USD</div>
+            <div class="amount">0,00 GBP</div>
+            <div class="amount">0,00 YEN</div>
+        </div>
+        <expand-collapse [leftArrow]="true">
+            <header>
+                <div class="quadratura bold">
+                    <div class="title">Quadratura A + B + C + D + E</div>
+                    <div class="amount">100,00 EUR</div>
+                    <div class="amount">100,00 USD</div>
+                    <div class="amount">100,00 GBP</div>
+                    <div class="amount">100,00 YEN</div>
+                </div>
+            </header>
+            <content>
+                <div class="quadratura">
+                    <div class="title">(A) Settlement (gross amount)</div>
+                    <div class="amount">100,00 EUR</div>
+                    <div class="amount">100,00 USD</div>
+                    <div class="amount">100,00 GBP</div>
+                    <div class="amount">100,00 YEN</div>
+                </div>
+                <div class="quadratura">
+                    <div class="title">(B) Reconciliation Fundtransfer by Acquirer</div>
+                    <div class="amount">100,00 EUR</div>
+                    <div class="amount">100,00 USD</div>
+                    <div class="amount">100,00 GBP</div>
+                    <div class="amount">100,00 YEN</div>
+                </div>
+                <expand-collapse [leftArrow]="true">
+                    <header>
+                        <div class="quadratura">
+                            <div class="title">(C) Fee accounted on D6</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                    </header>
+                    <content>
+                        <div class="quadratura">
+                            <div class="title level-2">D6CRXSFEE</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                        <div class="quadratura">
+                            <div class="title level-2">D6CRXSFEEBON</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                        <div class="quadratura">
+                            <div class="title level-2">D6ADJUST</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                    </content>
+                </expand-collapse>
+                <expand-collapse [leftArrow]="true">
+                    <header>
+                        <div class="quadratura">
+                            <div class="title">(D) Disputes</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                    </header>
+                    <content>
+                        <div class="quadratura">
+                            <div class="title level-2">Negative Dispute</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                        <div class="quadratura">
+                            <div class="title level-2">Positive Disputes</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                    </content>
+                </expand-collapse>
+                <expand-collapse [leftArrow]="true">
+                    <header>
+                        <div class="quadratura">
+                            <div class="title">(E) Manual operation (only for amministrazione)</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                    </header>
+                    <content>
+                        <div class="quadratura">
+                            <div class="title level-2">Amount received in next bonifico</div>
+                            <div class="amount">100,00 EUR</div>
+                            <div class="amount">100,00 USD</div>
+                            <div class="amount">100,00 GBP</div>
+                            <div class="amount">100,00 YEN</div>
+                        </div>
+                    </content>
+                </expand-collapse>
+            </content>
+        </expand-collapse>
+    </content>
+</expand-collapse>
+
+<expand-collapse [leftArrow]="true">
+    <header>
+        <div class="quadratura bold color margin-top">
+            <div class="title">04/07/2021</div>
+            <div class="sub-title">Giorno quadrato</div>
+        </div>
+    </header>
+    <content></content>
+</expand-collapse>
+
+<expand-collapse [leftArrow]="true">
+    <header>
+        <div class="quadratura bold color margin-top">
+            <div class="title">03/07/2021</div>
+            <div class="sub-title">Giorno quadrato</div>
+        </div>
+    </header>
+    <content></content>
+</expand-collapse>

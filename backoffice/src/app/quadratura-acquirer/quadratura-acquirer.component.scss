@@ -1,0 +1,40 @@
+.quadratura {
+  display: flex;
+  align-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  border: 1px solid #e0e0e0;
+
+  &.bold {
+    font-weight: 800;
+  }
+
+  &.color {
+    color: #fff;
+    background-color: #33b5e5;
+  }
+
+  &.margin-top {
+    margin-top: 0.5rem;
+  }
+
+  .title {
+    width: 60%;
+  }
+
+  .sub-title {
+    width: 40%;
+    text-align: center;
+  }
+
+  .amount {
+    width: 10%;
+  }
+
+  .level-2 {
+    padding-left: 2.5rem;
+  }
+
+  .level-3 {
+    padding-left: 5rem;
+  }
+}

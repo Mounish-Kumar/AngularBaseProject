@@ -2,13 +2,14 @@
   <ng-content select="header"></ng-content>
   <i
     class="pi collapse-arrow"
-    [ngClass]="collapse ? 'pi-angle-down' : 'pi-angle-up'"
+    [ngClass]="{ 'pi-angle-down': collapse, 'pi-angle-up': !collapse, 'left': leftArrow }"
+    *ngIf="!hideArrow"
   ></i>
 </div>
 <div
   #cc
   class="collapsible-content"
-  [style.max-height]="this.collapse ? '0px' : this.contentHeight + 'px'"
+  [style.max-height]="collapse ? '0px' : 'max-content'"
 >
   <ng-content select="content"></ng-content>
 </div>
